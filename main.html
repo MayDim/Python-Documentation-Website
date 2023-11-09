@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="navbar-header"> Python Documentation</header>
+      <ul class="navbar-ul">
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a> </li>
+        <li><a class="nav-link" href="#Hello_World">Hello World</a> </li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Variable_Scope">Variable Scope</a></li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+        <li><a class="nav-link" href="#If...Else_Statement">If...Else Statement</a></li>
+        <li><a class="nav-link" href="#While_Statement">While Statement</a></li>
+        <li><a class="nav-link" href="#Function_Declarations">Function Declarations</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            Python is a high-level, versatile, and widely-used programming language known for its   simplicity and readability. Guido van Rossum created Python in the late 1980s, and it has since become a favorite among developers, data scientists, and researchers due to its elegant syntax and extensive standard library.
+          </p>
+
+          <p>
+          Python's design philosophy emphasizes code readability and encourages developers to write clean and maintainable code. This makes it an excellent choice for beginners and experts alike. Python's versatility allows you to build a wide range of applications, from web development and data analysis to scientific research and automation.
+          </p>
+          <p>Key Features of Python:</p>
+    <ul>
+        <li><strong>Readable and Expressive Syntax:</strong> Python's clear and concise syntax promotes code clarity and makes it easy to understand and write, reducing the likelihood of errors.</li>
+        <li><strong>Cross-Platform Compatibility:</strong> Python is available on various platforms, including Windows, macOS, and Linux, allowing you to write code once and run it anywhere.</li>
+        <li><strong>Large Standard Library:</strong> Python's extensive standard library provides pre-built modules and packages for various tasks, reducing the need to reinvent the wheel.</li>
+        <li><strong>Dynamic Typing:</strong> Python is dynamically typed, making it flexible and adaptable to different data types.</li>
+        <li><strong>Community and Ecosystem:</strong> Python boasts a vibrant community of developers, and there is an abundance of third-party libraries and frameworks available, expanding its capabilities for a variety of applications.</li>
+    </ul>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following background knowledge </p>
+          <ul>
+              <li>Programming Basics: Learn about variables, data types, if statements, and loops. </li>
+              <li>Math Skills: Understand basic arithmetic and algebra. </li>
+              <li>Text Editors/IDEs: Get comfortable with coding tools like Visual Studio Code or PyCharm. </li>
+          </ul>  
+        </article>
+      </section>
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <article>
+          <p>If you're new to Python, the first program you typically write is the classic "Hello, World!" program. It's a simple way to verify that your Python environment is set up correctly and that you can run Python code. Here's how to do it:</p>
+          <pre>
+            <code> print("Hello, World!")</code>
+          </pre>
+            <p>Open a text editor or Python IDE, create a new file, paste the code above, and save it with a ".py" file extension (e.g., "hello.py").</p>
+            <p>To run the program, open your command prompt or terminal, navigate to the folder where you saved the file, and type the following command:</p>
+    
+          <pre>
+            <code> python hello.py</code>
+          </pre>
+
+          <p>You should see "Hello, World!" printed to the screen. Congratulations, you've just run your first Python program!</p>
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+         <p>In Python, variables are used to store and manage data. Unlike many other programming languages, you don't need to declare a data type when creating a variable. Python determines the data type automatically based on the assigned value. Here's how variables work in Python:</p>
+    
+        <pre>
+          <code>
+                # Variable assignment
+                name = "John"
+                age = 30
+                height = 175.5
+
+                # Printing variable values
+                print("Name:", name)
+                print("Age:", age)
+                print("Height:", height)
+
+                # Variable reassignment
+                name = "Alice"
+                age = 25
+
+                # Updated values
+                print("Updated Name:", name)
+                print("Updated Age:", age)
+          </code>
+      </pre>
+
+          <p>As shown in the example above, you can create variables and assign values to them. Python's dynamic typing allows you to change the value and data type of a variable later in the code. This flexibility makes Python easy to work with for various types of data.</p>      
+      </section>
+      <section class="main-section" id="Variable_Scope"> 
+        <header>Variable Scope</header>
+        <article>
+    <p>In Python, variable scope defines where a variable is accessible and can be used within your code. There are two main types of variable scope:</p>
+    
+    <h3>1. Global Scope:</h3>
+    <p>Variables defined outside of any function or block have global scope. They can be accessed from anywhere in your code, both inside and outside functions.</p>
+    
+    <h3>2. Local Scope:</h3>
+    <p>Variables defined within a function have local scope. They are only accessible within that specific function. Attempting to access them outside of the function will result in an error.</p>
+    
+    <p>Here's a simple example to illustrate variable scope:</p>
+    
+    <h3>Python Code:</h3>
+    <pre>
+<code>
+# Global variable
+global_var = "I'm a global variable"
+
+def my_function():
+    # Local variable
+    local_var = "I'm a local variable"
+    print(global_var)  # Accessing the global variable
+    print(local_var)   # Accessing the local variable
+
+my_function()
+
+# Attempting to access the local variable outside the function will result in an error.
+# print(local_var)  # Uncommenting this line will cause an error.
+</code>
+    </pre>
+
+    <p>Understanding variable scope is crucial for managing data effectively in your Python programs. Variables declared in different scopes serve various purposes and have different lifetimes.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Constants">
+        <header>Constants</header>
+        <article>
+           <p>In Python, constants are variables whose values should not be modified once they are set. While Python doesn't have a strict concept of constants like some other languages, it uses naming conventions to indicate that a variable should be treated as a constant. By convention, constant names are usually written in uppercase letters.</p>
+
+    <p>Here's an example of defining a constant in Python:</p>
+
+    <pre>
+<code>
+# Define a constant (by convention, use uppercase letters)
+PI = 3.14159265
+RADIUS = 5
+
+# Calculate the area of a circle
+area = PI * (RADIUS ** 2)
+
+print("The area of the circle is:", area)
+</code>
+    </pre>
+
+    <p>While Python doesn't enforce the immutability of constants, following the naming convention and treating variables in uppercase as constants is a good practice to make your code more readable and to signal to other developers that a variable's value should remain unchanged.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <article>
+           <p>Data types in Python represent the kind of data that a variable can hold. Python supports various built-in data types, and understanding them is crucial for working with data effectively. Some common data types in Python include:</p>
+    
+    <h4>1. Integers (int):</h4>
+    <p>Integers are whole numbers without a fractional part, such as -3, 0, and 42.</p>
+    
+    <h4>2. Floating-Point Numbers (float):</h4>
+    <p>Floats represent real numbers with a decimal point, like 3.14 or -0.5.</p>
+    
+    <h4>3. Strings (str):</h4>
+    <p>Strings are sequences of characters, enclosed in single or double quotes, e.g., "Hello, World!"</p>
+    
+    <h4>4. Lists:</h4>
+    <p>Lists are ordered collections of items. They can contain a mix of different data types.</p>
+    
+    <h4>5. Dictionaries:</h4>
+    <p>Dictionaries are key-value pairs used to store data in an associative manner.</p>
+    
+    <h4>6. Booleans (bool):</h4>
+    <p>Booleans represent either True or False, used for logical operations.</p>
+        </article>
+      </section>
+      <section class="main-section" id="If...Else_Statement">
+        <header>If...Else Statement</header>
+        <article>
+          <p>The <code>if-else</code> statement in Python is used for decision-making. It allows you to execute a block of code if a specified condition is true, and another block of code if the condition is false.
+          </p>
+
+          <h4>Syntax:</h4>
+
+          <pre>
+            <code>
+              if condition:
+              # Code to be executed if the condition is true
+              else:
+              # Code to be executed if the condition is false
+            </code>
+          </pre>
+
+          <h4>Example:</h4>
+
+          <p>Consider the following example where we check if a number is even or odd:
+          </p>
+
+          <pre>
+          <code>
+          # Get user input
+          num = int(input("Enter a number: "))
+
+          # Check if the number is even or odd
+          if num % 2 == 0:
+              print(f"{num} is an even number.")
+          else:
+              print(f"{num} is an odd number.")
+          </code>
+          </pre>
+
+          <p>In this example, the <code>if</code> statement checks if the remainder of the division of <code>num</code> by 2 is 0. If true, it prints that the number is even; otherwise, it prints that the number is odd.
+          </p>
+        </article>
+      </section>
+      
+      <section class="main-section" id="While_Statement">
+        <header>While Statement</header>
+        <article>
+              <p>The <code>while</code> loop in Python is used to repeatedly execute a block of code as long as a specified condition is true.
+              </p>
+
+              <h4>Syntax:</h4>
+
+              <pre>
+              <code>
+              while condition:
+                  # Code to be executed while the condition is true
+              </code>
+              </pre>
+
+              <h4>Example:</h4>
+
+              <p>
+                  Consider the following example where we print numbers from 1 to 5 using a <code>while</code> loop:
+              </p>
+
+              <pre>
+              <code>
+              # Initialize a counter
+              counter = 1
+
+              # Print numbers from 1 to 5
+              while counter <= 5:
+                  print(counter)
+                  counter += 1
+              </code>
+              </pre>
+
+              <p>
+          In this example, the <code>while</code> loop continues to execute as long as the <code>counter</code> is less than or equal to 5. It prints the current value of the counter and increments it in each iteration.
+              </p>
+              </article> 
+      </section>
+      <section class="main-section" id="Function_Declarations">
+        <header>Function Declarations</header>
+          <article>
+          <p>
+              In Python, a function is a block of reusable code that performs a specific task. It helps in organizing code and makes it more modular and readable.
+          </p>
+
+          <h4>Syntax:</h4>
+
+          <pre>
+          <code>
+          def function_name(parameters):
+              # Code to be executed
+              # ...
+              return result
+          </code>
+          </pre>
+
+          <h4>Example:</h4>
+
+          <p>Consider the following example of a function that adds two numbers:
+          </p>
+
+          <pre>
+          <code>
+          # Function declaration
+          def add_numbers(a, b):
+              # Code to add two numbers
+              result = a + b
+              return result
+
+          # Function call
+          sum_result = add_numbers(5, 3)
+          print(f"The sum is: {sum_result}")
+          </code>
+          </pre>
+
+          <p>In this example, the <code>add_numbers</code> function takes two parameters (<code>a</code> and <code>b</code>), adds them, and returns the result. The function is then called with arguments 5 and 3, and the result is printed.
+          </p>
+          </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li> 
+              All the documentation in this page is taken from
+              <a href="https://www.python.org/about/gettingstarted/" target="_blank">Python For Beginners</a>
+            </li>
+
+          </ul>
+        </article>
+      </section>
+  </main>
+</html>
